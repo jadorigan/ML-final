@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, plot_roc_curve
 import matplotlib.pyplot as plt
 
-dataset2 = pd.read_csv('data/bill_authentication.csv')
+#dataset2 = pd.read_csv('data/bill_authentication.csv')
 dataset = pd.read_csv('data/dataset.csv')
 start_time = 0
 
