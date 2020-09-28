@@ -7,11 +7,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, plot_roc_curve
 import matplotlib.pyplot as plt
 
-dataset = pd.read_csv('data/bill_authentication.csv')
+dataset2 = pd.read_csv('data/bill_authentication.csv')
+dataset = pd.read_csv('data/dataset.csv')
 start_time = 0
 
-X = dataset.iloc[:, 0:4].values #atributos
-y = dataset.iloc[:, 4].values #labels
+X = dataset.iloc[:, 0:94].values #atributos
+y = dataset.iloc[:, 94].values #labels
 
 # separação treino - teste: 80 - 20
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
