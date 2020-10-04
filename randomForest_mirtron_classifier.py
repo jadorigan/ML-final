@@ -2,34 +2,10 @@ import lib.utils as utils
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler # Feature Scaling
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.feature_selection import SelectFromModel
 
 from impressao import print_resultados
+from selecaoCaracteristicas import selecao_feature
 
-#----------------------------------------------------------
-# SELEÇÃO DE FEATURE
-#----------------------------------------------------------
-def selecao_feature(X, y):
-    print('SHAPE ENTRADA')
-    print (X.shape)
-
-    clf = ExtraTreesClassifier(n_estimators=600)
-    clf = clf.fit(X,y)
-
-    print("\n FEATURE IMPORTANCE")
-    print(clf.feature_importances_)
-
-    model = SelectFromModel(clf,prefit=True)
-    X_new = model.transform(X)
-
-    print('\nNEW SHAPE')
-    print(X_new.shape)
-    return X_new
-
-#----------------------------------------------------------
-# PREDIÇÃO - Random Forest
-#----------------------------------------------------------
 def Random_Forest(X, y, start_time):
     X_new = selecao_feature(X, y)
     
