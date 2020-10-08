@@ -1,13 +1,12 @@
 import lib.utils as utils
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
+from sklearn.naive_bayes import GaussianNB
 
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_XGBoost(X, y, start_time):
-    nome = "XGBoost"
+def Classifier_Bayes(X, y, start_time):
+    nome = "Bayes"
     X_new = selecao_feature(X, y)
     
     # split data into train and test sets
@@ -23,7 +22,7 @@ def Classifier_XGBoost(X, y, start_time):
 
     # fit model no training data
     ## parametros do Modelo: https://xgboost.readthedocs.io/en/latest/python/python_api.html
-    model = XGBClassifier(random_state=1,learning_rate=0.01,max_depth=6, objective ='reg:logistic')
+    model = GaussianNB()
     model.fit(X_train, y_train)
 
     #modelo

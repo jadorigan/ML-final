@@ -1,13 +1,12 @@
 import lib.utils as utils
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_XGBoost(X, y, start_time):
-    nome = "XGBoost"
+def Classifier_KNN(X, y, start_time):
+    nome = "KNN"
     X_new = selecao_feature(X, y)
     
     # split data into train and test sets
@@ -22,8 +21,7 @@ def Classifier_XGBoost(X, y, start_time):
     print('Testing  Shape :',X_test.shape)
 
     # fit model no training data
-    ## parametros do Modelo: https://xgboost.readthedocs.io/en/latest/python/python_api.html
-    model = XGBClassifier(random_state=1,learning_rate=0.01,max_depth=6, objective ='reg:logistic')
+    model = KNeighborsClassifier(n_neighbors=3, metric='euclidean')
     model.fit(X_train, y_train)
 
     #modelo

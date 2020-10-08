@@ -9,6 +9,7 @@ from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
 def Classifier_Gradient_Boosting(X, y, start_time):
+    nome = "Gradient_Boosting"
     X_new = selecao_feature(X, y)
    
     # split data into train and test sets
@@ -45,4 +46,4 @@ def Classifier_Gradient_Boosting(X, y, start_time):
 
     diff_time = utils.get_time_diff(start_time) # Tempo final
 
-    print_resultados(model, y_test, predictions, diff_time, X_test)
+    print_resultados(model, y_test, predictions, diff_time, X_test, nome)

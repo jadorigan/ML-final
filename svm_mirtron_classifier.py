@@ -1,13 +1,13 @@
 import lib.utils as utils
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler # Feature Scaling
-from sklearn.ensemble import RandomForestClassifier
+from sklearn import svm #svm
 
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Random_Forest(X, y, start_time):
-    nome = "Ramdom_Forest"
+def SVM(X, y, start_time):
+    nome = "SVM"
     X_new = selecao_feature(X, y)
     
     # separação treino - teste: 80 - 20
@@ -19,8 +19,7 @@ def Random_Forest(X, y, start_time):
     X_test = sc.transform(X_test)
 
     # Treinamento e Predição
-    # 20 árvores (com 100 árvores tem o mesmo resultado)
-    classifier = RandomForestClassifier(n_estimators=200, random_state=0)
+    classifier = svm.SVC(kernel='rbf', C=5,gamma = 0.0001,probability=True)
     classifier.fit(X_train, y_train)
     start_time = utils.get_time() # Tempo inicial
     y_pred = classifier.predict(X_test)
