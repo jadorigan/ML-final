@@ -35,6 +35,10 @@ def print_resultados(classifier, y_test, y_pred, diff_time, X_test, nome):
     
     accuracy = accuracy_score(y_test, y_pred)
     print("\nAcurácia: : %.2f%%" % (accuracy * 100.0))
+    output_file = get_time() + " - " + nome + " - Acurácia: %.2f%%" % (accuracy * 100.0)
+    with open("resultados/acuracia/acuracia.txt", "a") as text_file:
+        text_file.write(output_file)
+        text_file.write("\n")
 
     mse = mean_squared_error(y_test, classifier.predict(X_test))
     print("The mean squared error (MSE) on test set: {:.4f}".format(mse))

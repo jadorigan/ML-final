@@ -1,0 +1,9 @@
+
+07-10-2020 23.44.47 - Ramdom_Forest - Acurácia: 78.05%
+07-10-2020 23.45.17 - XGBoost - Acurácia: 78.95%
+07-10-2020 23.45.20 - Gradient_Boosting - Acurácia: 78.40%
+07-10-2020 23.45.23 - SVM - Acurácia: 72.65%
+07-10-2020 23.45.47 - LDA - Acurácia: 77.78%
+07-10-2020 23.45.49 - Bayes - Acurácia: 76.29%
+07-10-2020 23.45.51 - Logistic_Regression - Acurácia: 78.64%
+07-10-2020 23.45.53 - KNN - Acurácia: 74.96%
