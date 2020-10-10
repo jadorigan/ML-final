@@ -1,0 +1,17 @@
+08-10-2020 22.58.16 - Gradient_Boosting - avg prec recall: 82.04%
+08-10-2020 23.06.27 - Gradient_Boosting - avg prec recall: 78.99%
+09-10-2020 21.02.54 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.28.41 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.35.29 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.37.13 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.38.10 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.38.40 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.39.44 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.40.13 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.55.05 - Ramdom_Forest - avg prec recall: 79.46%
+09-10-2020 21.55.22 - Ramdom_Forest - avg prec recall: 78.05%
+09-10-2020 21.55.40 - Ramdom_Forest - avg prec recall: 79.23%
+09-10-2020 21.56.25 - Ramdom_Forest - avg prec recall: 78.05%
+09-10-2020 21.56.42 - Bayes - avg prec recall: 73.87%
+09-10-2020 21.59.05 - Ramdom_Forest - avg prec recall: 80.75%
+09-10-2020 21.59.14 - XGBoost - avg prec recall: 79.42%

@@ -5,9 +5,9 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_LDA(X, y, start_time):
+def Classifier_LDA(X, y, start_time, resp1):
     nome = "LDA"
-    X_new = selecao_feature(X, y)
+    X_new = selecao_feature(X, y, resp1)
     
     # split data into train and test sets
     seed = 100

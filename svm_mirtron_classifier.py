@@ -6,9 +6,9 @@ from sklearn import svm #svm
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def SVM(X, y, start_time):
+def SVM(X, y, start_time, resp1):
     nome = "SVM"
-    X_new = selecao_feature(X, y)
+    X_new = selecao_feature(X, y, resp1)
     
     # separação treino - teste: 80 - 20
     X_train, X_test, y_train, y_test = train_test_split(X_new, y, test_size=0.2, random_state=0)

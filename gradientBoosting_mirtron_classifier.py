@@ -8,9 +8,9 @@ from sklearn.metrics import mean_squared_error
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_Gradient_Boosting(X, y, start_time):
+def Classifier_Gradient_Boosting(X, y, start_time, resp1):
     nome = "Gradient_Boosting"
-    X_new = selecao_feature(X, y)
+    X_new = selecao_feature(X, y, resp1)
    
     # split data into train and test sets
     seed = 0

@@ -5,9 +5,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_KNN(X, y, start_time):
+def Classifier_KNN(X, y, start_time, resp1):
     nome = "KNN"
-    X_new = selecao_feature(X, y)
+    X_new = selecao_feature(X, y, resp1)
     
     # split data into train and test sets
     seed = 100

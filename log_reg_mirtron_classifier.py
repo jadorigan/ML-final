@@ -5,9 +5,9 @@ from sklearn.linear_model import LogisticRegression
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_LogisticRegression(X, y, start_time):
+def Classifier_LogisticRegression(X, y, start_time, resp1):
     nome = "Logistic_Regression"
-    X_new = selecao_feature(X, y)
+    X_new = selecao_feature(X, y, resp1)
     
     # split data into train and test sets
     seed = 100
