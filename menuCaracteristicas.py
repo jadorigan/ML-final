@@ -1,6 +1,6 @@
 def menuSelCarac():
-    print('\n ================ Seletores de Características ================== \n')
-    print('1 - ExtraTreesClassifier')
+    print('================ Seletores de Características ==================')
+    print('1 - ExtraTrees')
     print('2 - LinearSVC')
     print('3 - VarianceThreshold')
     print('0 - Sair')

@@ -17,6 +17,6 @@ if __name__ == "__main__":
       resp1 = menuSelCarac()
       if resp1 == 0:
          break
-      resp2 = menuSelClass(resp1, X, y, start_time)
+      resp2 = menuSelClass(resp1, X, y)
       if resp2 == 0:
          break

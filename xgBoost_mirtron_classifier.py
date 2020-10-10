@@ -2,11 +2,10 @@ import lib.utils as utils
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
-
 from impressao import print_resultados
 from selecaoCaracteristicas import selecao_feature
 
-def Classifier_XGBoost(X, y, start_time, resp1):
+def Classifier_XGBoost(X, y, resp1):
     nome = "XGBoost"
     X_new = selecao_feature(X, y, resp1)
     
@@ -17,18 +16,10 @@ def Classifier_XGBoost(X, y, start_time, resp1):
     # separação treino - teste: 80 - 20
     X_train, X_test, y_train, y_test = train_test_split(X_new, y, test_size=test_size, random_state=seed)
 
-    #shapes
-    print('\nTraining Shape :',X_train.shape)
-    print('Testing  Shape :',X_test.shape)
-
     # fit model no training data
     ## parametros do Modelo: https://xgboost.readthedocs.io/en/latest/python/python_api.html
     model = XGBClassifier(random_state=1,learning_rate=0.01,max_depth=6, objective ='reg:logistic')
     model.fit(X_train, y_train)
-
-    #modelo
-    print("\nMODELO")
-    print(model)
 
     # make predictions for test data
     start_time = utils.get_time() # Tempo inicial
