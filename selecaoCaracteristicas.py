@@ -11,13 +11,16 @@ def selecao_feature(X, y, resp1):
         model = SelectFromModel(clf,prefit=True)
         X_new = model.transform(X)
         print('Extra Trees - New Shape: ', X_new.shape)
+        nomeFeature = 'Extra Trees'
     elif resp1 == 2:
         clf = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, y)
         model = SelectFromModel(clf,prefit=True)
         X_new = model.transform(X)
         print('LinearSVC - New Shape: ', X_new.shape)
+        nomeFeature = 'LinearSVC'
     elif resp1 == 3:
         clf = VarianceThreshold(threshold=(.9 * (1 - .9)))
         X_new = clf.fit_transform(X)
         print('Variance Threshold - New Shape: ', X_new.shape)
-    return X_new
+        nomeFeature = 'Variance Threshold'
+    return X_new, nomeFeature

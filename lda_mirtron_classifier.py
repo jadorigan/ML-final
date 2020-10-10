@@ -6,11 +6,11 @@ from selecaoCaracteristicas import selecao_feature
 
 def Classifier_LDA(X, y, resp1):
     nome = "LDA"
-    X_new = selecao_feature(X, y, resp1)
+    X_new, nomeFeature = selecao_feature(X, y, resp1)
     
     # split data into train and test sets
     seed = 100
-    test_size = 0.3
+    test_size = 0.2
 
     # separação treino - teste: 80 - 20
     X_train, X_test, y_train, y_test = train_test_split(X_new, y, test_size=test_size, random_state=seed)
@@ -26,4 +26,4 @@ def Classifier_LDA(X, y, resp1):
     predictions = [round(value) for value in y_pred]
     diff_time = utils.get_time_diff(start_time) # Tempo final
     
-    print_resultados(model, y_test, predictions, diff_time, X_test, nome)
+    print_resultados(model, y_test, predictions, diff_time, X_test, nome, nomeFeature)
